@@ -1,9 +1,6 @@
 package com.ksr.service;
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.ksr.dao.ContactRepository;
 import com.ksr.dto.Contact;
 
@@ -17,12 +14,9 @@ public class ContactServiceImpl implements ContactService {
 
 		try {
 			contactRepository.save(contact);
-
 		} catch (Exception e) {
-
 			return false;
 		}
-
 		return true;
 	}
 
@@ -42,10 +36,8 @@ public class ContactServiceImpl implements ContactService {
 		try {
 			contactRepository.deleteById(cid);
 		} catch (Exception e) {
-
 			return false;
 		}
-
 		return true;
 
 	}
